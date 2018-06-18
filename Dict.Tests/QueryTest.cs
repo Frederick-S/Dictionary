@@ -11,5 +11,13 @@ namespace Dict.Tests
 
             Assert.True(word.Explanations.Count > 0);
         }
+
+        [Fact]
+        public void ShouldFindWordSuggestions()
+        {
+            var word = new Dict().Query("nameaaaa");
+
+            Assert.True(word.Suggestions.Count > 0);
+        }
     }
 }
