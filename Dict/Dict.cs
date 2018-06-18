@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 
@@ -35,9 +36,11 @@ namespace Dict
 
         private string TrimSuggestion(string suggestion)
         {
-            return suggestion.Trim()
-                .Replace("\n", string.Empty)
-                .Replace(" ", string.Empty);
+            var regex = new Regex("[ ]{2,}", RegexOptions.None);
+            var result = suggestion.Trim()
+                .Replace("\n", string.Empty);
+
+            return regex.Replace(result, " ");
         }
     }
 }
