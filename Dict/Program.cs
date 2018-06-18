@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dictionary
+namespace Dict
 {
     class Program
     {

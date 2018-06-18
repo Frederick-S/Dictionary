@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Dictionary/Dictionary.csproj"
+                "${workspaceFolder}/Dict/Dict/Dict.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
