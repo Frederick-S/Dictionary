@@ -11,3 +11,6 @@ dotnet tool install --global Dict
 ```
 dict word
 ```
+
+## License
+MIT
