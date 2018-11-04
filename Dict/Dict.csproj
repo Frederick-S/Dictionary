@@ -16,6 +16,7 @@
     <PackageProjectUrl>https://github.com/Frederick-S/Dictionary</PackageProjectUrl>
     <RepositoryUrl>git@github.com:Frederick-S/Dictionary.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
