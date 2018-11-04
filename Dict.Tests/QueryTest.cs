@@ -9,6 +9,7 @@ namespace Dict.Tests
         {
             var word = new Dict().Query("name");
 
+            Assert.True(word.Pronunciations.Count > 0);
             Assert.True(word.Explanations.Count > 0);
         }
 
