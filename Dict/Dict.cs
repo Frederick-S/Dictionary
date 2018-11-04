@@ -17,6 +17,7 @@ namespace Dict
 
             var word = new Word();
             var explanationNodes = document.QuerySelectorAll(".wordbook-js + .trans-container ul li");
+            var pronunciationNodes = document.QuerySelectorAll(".wordbook-js .baav .pronounce");
 
             if (explanationNodes.Count() == 0)
             {
@@ -27,6 +28,31 @@ namespace Dict
             }
             else
             {
+                word.Pronunciations = pronunciationNodes.Select(x =>
+                {
+                    if (x.InnerText.Contains("英"))
+                    {
+                        return new Pronunciation
+                        {
+                            AccentType = AccentType.British,
+                            Soundmark = x.QuerySelector(".phonetic").InnerText,
+                        };
+                    }
+                    else if (x.InnerText.Contains("美"))
+                    {
+                        return new Pronunciation
+                        {
+                            AccentType = AccentType.American,
+                            Soundmark = x.QuerySelector(".phonetic").InnerText,
+                        };
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                })
+                .Where(x => x != null)
+                .ToList();
                 word.Explanations = explanationNodes.Select(x => x.InnerText)
                     .ToList();
             }
