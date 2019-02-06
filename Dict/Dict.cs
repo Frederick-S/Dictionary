@@ -53,6 +53,7 @@ namespace Dict
                 })
                 .Where(x => x != null)
                 .ToList();
+
                 word.Explanations = explanationNodes.Select(x => x.InnerText)
                     .ToList();
             }
