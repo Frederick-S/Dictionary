@@ -30,20 +30,23 @@ namespace Dict
             {
                 word.Pronunciations = pronunciationNodes.Select(x =>
                 {
-                    if (x.InnerText.Contains("英"))
+                    var accentType = x.InnerText;
+                    var soundmark = x.QuerySelector(".phonetic")?.InnerText;
+
+                    if (accentType.Contains("英"))
                     {
                         return new Pronunciation
                         {
                             AccentType = AccentType.British,
-                            Soundmark = x.QuerySelector(".phonetic").InnerText,
+                            Soundmark = soundmark,
                         };
                     }
-                    else if (x.InnerText.Contains("美"))
+                    else if (accentType.Contains("美"))
                     {
                         return new Pronunciation
                         {
                             AccentType = AccentType.American,
-                            Soundmark = x.QuerySelector(".phonetic").InnerText,
+                            Soundmark = soundmark,
                         };
                     }
                     else
