@@ -4,7 +4,12 @@ A simple English->Chinese terminal dictionary.
 
 ## Installation
 ```
-dotnet tool install --global Dict
+dotnet tool install -g Dict
+```
+
+## Update
+```
+dotnet tool update -g Dict
 ```
 
 ## Usage
