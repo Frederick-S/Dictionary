@@ -5,7 +5,7 @@ nuget install -Verbosity quiet -OutputDirectory packages -Version 4.7.922 OpenCo
 nuget install -Verbosity quiet -OutputDirectory packages -Version 4.1.4 ReportGenerator
 
 OPENCOVER=$PWD/packages/OpenCover.4.7.922/tools/OpenCover.Console.exe
-REPORTGENERATOR=$PWD/packages/reportgenerator/4.1.4/tools/ReportGenerator.exe
+REPORTGENERATOR=$PWD/packages/reportgenerator/4.1.4/tools/netcoreapp2.0/ReportGenerator.dll
 
 coverage=./coverage
 mkdir $coverage
@@ -20,7 +20,7 @@ $OPENCOVER \
   -register:user
 
 echo "Generating HTML report"
-$REPORTGENERATOR \
+dotnet $REPORTGENERATOR \
   -reports:$coverage/coverage.xml \
   -targetdir:$coverage \
   -verbosity:Error
