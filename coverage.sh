@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Install OpenCover and ReportGenerator, and save the path to their executables.
-nuget install -Verbosity quiet -OutputDirectory packages -Version 4.6.519 OpenCover
-nuget install -Verbosity quiet -OutputDirectory packages -Version 3.1.1 ReportGenerator
+nuget install -Verbosity quiet -OutputDirectory packages -Version 4.7.922 OpenCover
+nuget install -Verbosity quiet -OutputDirectory packages -Version 4.1.4 ReportGenerator
 
-OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
-REPORTGENERATOR=$PWD/packages/ReportGenerator.3.1.1/tools/ReportGenerator.exe
+OPENCOVER=$PWD/packages/OpenCover.4.7.922/tools/OpenCover.Console.exe
+REPORTGENERATOR=$PWD/packages/ReportGenerator.4.1.4/tools/ReportGenerator.exe
 
 coverage=./coverage
 mkdir $coverage
