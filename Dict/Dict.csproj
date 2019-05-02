@@ -12,11 +12,11 @@
     <Authors>Frederick-S</Authors>
     <Description>A simple English-&gt;Chinese terminal dictionary.</Description>
     <Copyright>MIT</Copyright>
-    <PackageLicenseUrl>https://github.com/Frederick-S/Dictionary/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Frederick-S/Dictionary</PackageProjectUrl>
     <RepositoryUrl>git@github.com:Frederick-S/Dictionary.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
