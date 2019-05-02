@@ -5,9 +5,9 @@ nuget install -Verbosity quiet -OutputDirectory packages -Version 4.7.922 OpenCo
 nuget install -Verbosity quiet -OutputDirectory packages -Version 4.1.4 ReportGenerator
 
 OPENCOVER=$PWD/packages/OpenCover.4.7.922/tools/OpenCover.Console.exe
-REPORTGENERATOR=$PWD/packages/reportgenerator/4.1.4/tools/netcoreapp2.0/ReportGenerator.dll
+REPORTGENERATOR=$PWD/packages/ReportGenerator.4.1.4/tools/netcoreapp2.0/ReportGenerator.dll
 
-ls $PWD/packages
+ls $PWD/packages/ReportGenerator.4.1.4
 
 coverage=./coverage
 mkdir $coverage
