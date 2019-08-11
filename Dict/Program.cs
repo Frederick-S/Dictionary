@@ -1,4 +1,5 @@
 ﻿using System;
+using CommandLine;
 
 namespace Dict
 {
@@ -13,7 +14,29 @@ namespace Dict
                 return;
             }
 
-            var name = args[0];
+            Parser.Default.ParseArguments<Options>(args)
+                .WithParsed<Options>(options =>
+                {
+                    if (options.Loop)
+                    {
+                        while (true)
+                        {
+                            Console.Write("dict > ");
+
+                            var name = Console.ReadLine();
+
+                            Query(name);
+                        }
+                    }
+                    else
+                    {
+                        Query(args[0]);
+                    }
+                });
+        }
+
+        private static void Query(string name)
+        {
             var word = new Dict().Query(name);
 
             new Printer().Print(word);
