@@ -13,9 +13,7 @@ dotnet tool update -g Dict
 ```
 
 ## Usage
-```
-dict word
-```
+`dict word` or `dict -l` to enter loop mode.
 
 ## License
 MIT
