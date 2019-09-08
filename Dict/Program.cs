@@ -15,7 +15,7 @@ namespace Dict
             }
 
             Parser.Default.ParseArguments<Options>(args)
-                .WithParsed<Options>(options =>
+                .WithParsed(options =>
                 {
                     if (options.Loop)
                     {
