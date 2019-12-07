@@ -1,4 +1,4 @@
-image: Visual Studio 2017
+image: Visual Studio 2019
 environment:
   PROJECT_FILE: ./Dict/Dict.csproj
   TEST_PROJECT_FILE: ./Dict.Tests/Dict.Tests.csproj
